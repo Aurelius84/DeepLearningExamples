@@ -70,8 +70,8 @@ if [ $num_gpus -gt 1 ] ; then
 fi
 
 #PHASE 1
-
-train_steps_phase1=$(expr $train_steps \* 9 \/ 10) #Phase 1 is 10% of training
+train_steps_phase1=$train_steps
+# train_steps_phase1=$(expr $train_steps \* 9 \/ 10) #Phase 1 is 10% of training
 gbs_phase1=$(expr $train_batch_size_phase1 \* $num_accumulation_steps_phase1)
 seq_len=128
 max_pred_per_seq=20

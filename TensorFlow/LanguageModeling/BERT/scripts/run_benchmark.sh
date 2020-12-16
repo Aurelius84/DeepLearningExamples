@@ -5,7 +5,7 @@ set -x
 batch_size=$1
 num_gpus=$2
 precision=$3
-num_accumulation_steps_phase1=$(expr 65536 \/ $batch_size \/ $num_gpus)
+num_accumulation_steps_phase1=$(expr 67584 \/ $batch_size \/ $num_gpus)
 train_steps=${4:-200}
 bert_model=${5:-"base"}
 
